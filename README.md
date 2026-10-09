@@ -18,6 +18,3 @@ Portfolio personnel en HTML, CSS et JavaScript. La page d’accueil renvoie vers
 La page Pricing présente les analyses, indicateurs et visualisations issus du rapport de projet. Le site inclut une chronologie, des filtres de compétences, une carte compétences-expériences, une présentation synthétique des indicateurs, un formulaire de contact ouvrant le logiciel e-mail, ainsi que le téléchargement du CV. Les liens externes vers des profils publics ne sont pas ajoutés.
 
 
-## Mesure d'audience (Umami)
-
-Un chargeur commun `analytics.js` est inclus sur les 18 pages. Pour activer le comptage, crée un site dans Umami Cloud, copie son identifiant de suivi puis remplace la valeur vide `WEBSITE_ID` dans `analytics.js`. Les visites seront alors consultables dans le tableau de bord Umami. Le suivi respecte le signal « Do Not Track », ne s'exécute pas en local et retire les paramètres de requête des URL envoyées. Aucun comptage ne démarre tant que l'identifiant n'est pas renseigné.
