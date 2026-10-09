@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#f5f9fd">
+ <meta name="description"
+  content="Étude de cas Pricing : prédiction de transformation des devis, mesures extraites du rapport et analyse des indicateurs.">
+ <title>Pricing — étude de cas Data & IA · Diego Torres</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link
+  href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+ <script defer src="pricing-data.js"></script>
+ <script defer src="analytics.js"></script><script defer src="language-switch.js"></script><script defer src="script.js"></script>
+</head>
+
+<body>
+ <div class="grain" aria-hidden="true"></div>
+ <div class="scroll-progress" id="scrollProgress"></div>
+ <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">DT<span>.</span></span><span
+    class="brand-name">DIEGO TORRES<small>DATA · SOFTWARE · IA</small></span></a>
+  <nav class="nav-links" id="navLinks"><a href="index.html#profil">Profil</a><a
+    href="index.html#parcours">Expériences</a><a href="experience-tc-concept.html">TC Concept</a><a class="nav-contact"
+    href="index.html#contact">Contact <span>↗</span></a></nav>
+  <div class="top-actions"><a class="nav-language" href="pricing-en.html" lang="en" hreflang="en">EN</a><a
+    class="header-cv" href="assets/cv/Diego_Torres_CV.pdf" download>CV ↓</a><button class="icon-button"
+    id="themeToggle" aria-label="Changer le thème">◐</button><button class="menu-toggle" id="menuToggle"
+    aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button></div>
+ </header>
+ <main class="detail-main"><a class="back-link" href="experience-tc-concept.html">← Retour à l’expérience TC Concept</a>
+  <section class="detail-hero reveal">
+   <div class="section-kicker">CAS D’ÉTUDE · DATA SCIENCE</div>
+   <div class="detail-year">ÉVALUATION SUR LE PREMIER TRIMESTRE 2025</div>
+   <h1>Pricing<br><em>et prédiction.</em></h1>
+   <div class="detail-company">Estimer la transformation d’un devis</div>
+   <p>Un modèle de classification explore les données historiques pour estimer si un devis sera transformé. Le rapport
+    documente les itérations, les différentes étapes de préparation, de modélisation et d’analyse des résultats.</p>
+   <div class="tag-row">
+    <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>LightGBM</span><span>Machine Learning</span>
+   </div>
+  </section>
+  <section class="detail-block">
+   <div class="detail-label">01 — PROBLÈME</div>
+   <div>
+    <h2>Transformer un historique<br>en signal exploitable.</h2>
+    <p>L’objectif du projet était d’aider les équipes à mieux estimer la transformation des devis. Le travail a exploré
+     deux niveaux de prédiction : les lignes d’un devis et le devis dans son ensemble, avec des variables d’historique
+     et des informations métier.</p>
+    <div class="problem-callout"><span>QUESTION MÉTIER</span>
+     <p>Comment les scores peuvent-ils aider à organiser la lecture des devis et à orienter l’analyse métier&nbsp;?</p>
+    </div>
+   </div>
+  </section>
+  <section class="detail-block">
+   <div class="detail-label">02 — DÉMARCHE</div>
+   <div>
+    <h2>Une démarche construite<br>par étapes.</h2>
+    <div class="step-list">
+     <article><b>01</b>
+      <div>
+       <h3>Construire un premier modèle</h3>
+       <p>Le rapport compare des données historiques et des variables de devis, puis compare les modèles à l’aide de
+        matrices de confusion, de scores de classification et de courbes par tranche de probabilité.</p>
+      </div>
+     </article>
+     <article><b>02</b>
+      <div>
+       <h3>Définir le protocole temporel</h3>
+       <p>Le rapport organise les données par période : apprentissage sur l’historique 2024, puis analyse du premier
+        trimestre 2025. Les variables d’historique sont rattachées à une période antérieure pour inscrire la prédiction
+        dans son contexte métier.</p>
+      </div>
+     </article>
+     <article><b>03</b>
+      <div>
+       <h3>Créer des variables métier</h3>
+       <p>Les variables sont enrichies avec des agrégats par devis, comme la moyenne et la médiane du montant HT, afin
+        de comparer plusieurs façons de représenter les données métier.</p>
+      </div>
+     </article>
+     <article><b>04</b>
+      <div>
+       <h3>Comparer par catégorie</h3>
+       <p>Le rapport présente des scores F1 et AUC par catégorie. Les catégories sont anonymisées dans ce graphique afin
+        de montrer la dispersion sans publier les libellés internes.</p>
+      </div>
+     </article>
+    </div>
+   </div>
+  </section>
+  <section class="data-section">
+   <div class="data-section-head">
+    <div>
+     <div class="section-kicker">03 — DONNÉES DU RAPPORT</div>
+     <h2>Les scores varient<br><em>selon la catégorie.</em></h2>
+    </div>
+    <p>Chaque point représente une catégorie du tableau de test, anonymisée. Les deux axes reprennent les scores F1 et
+     AUC reportés.</p>
+   </div>
+   <div class="metric-cards">
+    <div><span>MÉDIANE F1</span><b id="medianF1"></b><small>équilibre précision / rappel</small></div>
+    <div><span>MÉDIANE AUC</span><b id="medianAuc"></b><small>classement des observations</small></div>
+    <div><span>CATÉGORIES</span><b id="categoryCount"></b><small>lignes du tableau source</small></div>
+   </div>
+   <div class="chart-card">
+    <div class="chart-header">
+     <div><span class="chart-overline">F1 / AUC · TEST T1 2025</span>
+      <h3>Scores par catégorie anonymisée</h3>
+     </div>
+     <div class="chart-legend"><span><i class="legend-dot f1-dot"></i>F1</span><span><i
+        class="legend-dot auc-dot"></i>AUC</span></div>
+    </div>
+    <div class="scatter-wrap">
+     <div class="scatter-y-title">AUC</div><svg id="pricingChart" viewBox="0 0 760 420" role="img"
+      aria-label="Nuage de points montrant les scores F1 et AUC de catégories anonymisées du rapport"></svg>
+     <div class="chart-tooltip" id="chartTooltip" role="status"></div>
+    </div>
+    <div class="chart-foot"><span>Chaque cercle relie les scores F1 et AUC d’une catégorie du tableau.</span><span>Seuil
+      0,5 : repère de lecture</span></div>
+   </div>
+   <p class="source-note">Source : tableau « Section / n / Acc / F1 / AUC » du Rapport Pricing. Valeurs F1 et AUC
+    reprises telles quelles ; les noms de catégories et les volumes ont été retirés. Les médianes sont calculées sur les
+    lignes de ce tableau.</p>
+  </section>
+  <section class="capture-section" id="captures">
+   <div class="capture-heading">
+    <div>
+     <div class="section-kicker">04 — LES ÉLÉMENTS CLÉS DU RAPPORT</div>
+     <h2>De l’activité aux décisions.</h2>
+    </div>
+    <p>Les captures réunissent le contexte commercial, les règles de recommandation et les principaux axes d’analyse.
+     Chaque visuel éclaire une étape du projet.</p>
+   </div>
+   <article class="capture-story capture-story--dashboard">
+    <div class="capture-story-copy"><span class="capture-step">01 · LE CONTEXTE</span>
+     <h3>Où se concentre l’activité&nbsp;?</h3>
+     <p>Ce tableau de bord ventile les devis et le chiffre d’affaires par famille de produits. Il sert à repérer les
+      écarts entre familles et à filtrer l’analyse. Cette vue pose le contexte métier de l’analyse avant la lecture des
+      résultats du modèle.</p>
+    </div>
+    <figure class="capture-card reveal capture-image--dashboard"><button class="capture-open" type="button"
+      data-full="assets/captures-pricing/capture-02.png" data-caption="Vue du tableau de bord par famille"><img
+       src="assets/captures-pricing/capture-02.png"
+       alt="Capture du tableau de bord Power BI : histogrammes du nombre de devis et du chiffre d’affaires par famille, diagramme en anneau et filtre de famille."
+       loading="lazy"><span class="capture-zoom">Ouvrir en grand ↗</span></button>
+     <figcaption><strong>Vue du tableau de bord par famille</strong><span>Les graphiques montrent le nombre de devis et
+       le chiffre d’affaires par famille, avec un filtre pour explorer les segments.</span></figcaption>
+    </figure>
+   </article>
+   <div class="capture-story-pair">
+    <article class="capture-story capture-story--scatter">
+     <figure class="capture-card reveal capture-image--scatter"><button class="capture-open" type="button"
+       data-full="assets/captures-pricing/capture-07.png" data-caption="Relier marge et score de transformation"><img
+        src="assets/captures-pricing/capture-07.png"
+        alt="Nuage de points de la marge actuelle et des scores de transformation, avec des zones d’ajustement annotées."
+        loading="lazy"><span class="capture-zoom">Ouvrir en grand ↗</span></button>
+      <figcaption><strong>Relier marge et score de transformation</strong><span>Le rapport annote les zones du nuage
+        avec des actions de marge. La répartition des points permet de lire conjointement les différentes zones du
+        portefeuille de devis.</span></figcaption>
+     </figure>
+     <div class="capture-story-copy"><span class="capture-step">02 · LE LIEN MARGE / TRANSFORMATION</span>
+      <h3>Les recommandations dépendent du contexte.</h3>
+      <p>Chaque point représente une observation du rapport. Les cadres ajoutés matérialisent les zones où la marge
+       proposée varie avec le score et la position de la marge actuelle. Cette visualisation illustre la logique métier
+       explorée et la manière dont marge et score sont lus conjointement.</p>
+     </div>
+    </article>
+    <article class="capture-story capture-story--outcomes">
+     <figure class="capture-card reveal capture-image--outcomes"><button class="capture-open" type="button"
+       data-full="assets/captures-pricing/capture-12.png"
+       data-caption="Comparer l’écart de marge au résultat du devis"><img src="assets/captures-pricing/capture-12.png"
+        alt="Histogramme groupé comparant les marges proposées et réelles selon que le devis a été transformé ou non."
+        loading="lazy"><span class="capture-zoom">Ouvrir en grand ↗</span></button>
+      <figcaption><strong>Comparer l’écart de marge au résultat du devis</strong><span>Dans le rapport, la marge
+        proposée est inférieure à la marge réelle pour 62,8 % des devis non transformés. Pour les devis transformés,
+        53,5 % sont classés comme équivalents.</span></figcaption>
+     </figure>
+     <div class="capture-story-copy"><span class="capture-step">03 · LE RETOUR OBSERVÉ</span>
+      <h3>Les écarts se distribuent selon le statut du devis.</h3>
+      <p>Le rapprochement entre écart de marge et statut du devis met en évidence deux distributions différentes. Le
+       visuel met en regard le statut des devis et la répartition des écarts observés dans le rapport.</p>
+     </div>
+    </article>
+   </div>
+   <div class="capture-rule-heading"><span class="capture-step">04 · LES RÈGLES MÉTIER TESTÉES</span>
+    <h3>Comment le prototype proposait un ajustement.</h3>
+    <p>Les arbres ci-dessous traduisent les essais de règles du rapport. Ils comparent notamment les taux observés aux
+     références et prévoient des cas où le système conserve ou arrête l’action.</p>
+   </div>
+   <div class="capture-story-pair capture-story-pair--rules">
+    <article class="capture-story">
+     <figure class="capture-card reveal capture-image--rule"><button class="capture-open" type="button"
+       data-full="assets/captures-pricing/capture-05.png" data-caption="Premières règles de hausse ou de baisse"><img
+        src="assets/captures-pricing/capture-05.png"
+        alt="Arbre de décision des premières règles d’ajustement de marge, avec branches de marge plus, marge moins et stop."
+        loading="lazy"><span class="capture-zoom">Ouvrir en grand ↗</span></button>
+      <figcaption><strong>Premières règles de hausse ou de baisse</strong><span>Les conditions combinent le taux de
+        transformation observé, la marge actuelle et des valeurs de référence pour structurer les paliers
+        d’ajustement.</span></figcaption>
+     </figure>
+     <div class="capture-story-copy">
+      <p>Cette première arborescence rend les règles métier explicites. Elle montre aussi leur dépendance à des seuils
+       et à des moyennes : les seuils rendent explicite le périmètre de référence utilisé pour produire les
+       recommandations.</p>
+     </div>
+    </article>
+    <article class="capture-story">
+     <figure class="capture-card reveal capture-image--rule"><button class="capture-open" type="button"
+       data-full="assets/captures-pricing/capture-08.png" data-caption="Réévaluation dans le patch trimestriel"><img
+        src="assets/captures-pricing/capture-08.png"
+        alt="Arbre du patch trimestriel, montrant les décisions de hausse ou baisse de marge selon le taux de transformation et le rendement."
+        loading="lazy"><span class="capture-zoom">Ouvrir en grand ↗</span></button>
+      <figcaption><strong>Réévaluation dans le patch trimestriel</strong><span>Le schéma décrit une boucle : observer
+        l’évolution du taux et du rendement, puis adapter l’action au nouveau contexte.</span></figcaption>
+     </figure>
+     <div class="capture-story-copy">
+      <p>La version trimestrielle ajoute une logique de retour : les indicateurs sont observés à chaque période afin
+       d’adapter la stratégie au contexte actualisé.</p>
+     </div>
+    </article>
+   </div>
+   <p class="source-note">Les visuels reprennent des analyses présentées dans le rapport Pricing. Les libellés de
+    catégories ont été anonymisés pour cette présentation.</p>
+  </section>
+  <section class="detail-block">
+   <div class="detail-label">05 — SYNTHÈSE</div>
+   <div>
+    <h2>Des données<br>à la lecture métier.</h2>
+    <p>Le projet associe exploration des devis, création de variables, comparaison de modèles et restitution graphique.
+     Les indicateurs par catégorie donnent une lecture plus détaillée que la seule moyenne globale et nourrissent les
+     échanges avec les équipes métier.</p>
+    <div class="process-line"><span>Historique de devis</span><i>→</i><span>Modélisation</span><i>→</i><span>Analyse par
+      segment</span><i>→</i><span>Restitution</span></div>
+   </div>
+  </section>
+  <section class="learning-note"><span>APPORT DU PROJET</span>
+   <p>Cette étude m’a permis de travailler sur le cycle d’un projet de machine learning : préparation des données, choix
+    des variables, comparaison des indicateurs et restitution des résultats aux équipes métier.</p>
+  </section>
+  <dialog class="capture-dialog" id="captureDialog">
+   <form method="dialog"><button aria-label="Fermer">Fermer ×</button></form><img id="captureDialogImage" alt="">
+   <p id="captureDialogCaption"></p>
+  </dialog>
+  <nav class="detail-pagination"><a href="experience-tc-concept.html">← Expérience TC Concept</a><a
+    href="index.html#parcours">Toutes les expériences ↗</a></nav>
+ </main>
+ <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">DT<span>.</span></span><span
+    class="brand-name">DIEGO TORRES<small>DATA · SOFTWARE · IA</small></span></a><span>Étude de cas · données de rapport
+   anonymisées</span><a href="#">Retour en haut ↑</a></footer>
+</body>
+
+</html>

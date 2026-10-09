@@ -1,75 +1,291 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101713">
-  <meta name="description" content="Portfolio de Diego Torres, Data Engineer. Projets en intelligence artificielle, machine learning, data et développement d'applications métier.">
-  <title>Diego Torres — Data, IA & produits utiles</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f9fd">
+  <meta name="description"
+    content="Portfolio de Diego Torres : expériences en Data, IA et développement de logiciels métier.">
+  <title>Diego Torres — Portfolio Data & IA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <script defer src="analytics.js"></script><script defer src="language-switch.js"></script><script defer src="script.js"></script>
 </head>
+
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div class="scroll-progress" id="scrollProgress"></div>
-  <header class="topbar">
-    <a class="brand" href="#accueil" aria-label="Diego Torres, accueil"><span class="brand-mark">DT<span>.</span></span><span class="brand-name">DIEGO TORRES<small>DATA · SOFTWARE · IA</small></span></a>
-    <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
-      <a href="#profil">Profil</a><a href="#parcours">Parcours</a><a href="#projets">Projets</a><a href="#expertise">Expertise</a>
-      <a class="nav-contact" href="#contact">Parlons ensemble <span>↗</span></a>
-    </nav>
-    <div class="top-actions"><button class="icon-button" id="themeToggle" aria-label="Changer le thème" title="Changer le thème">◐</button><button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button></div>
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">DT<span>.</span></span><span
+        class="brand-name">DIEGO TORRES<small>DATA · SOFTWARE · IA</small></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigation"><a href="#profil">Profil</a><a
+        href="#parcours">Expériences</a><a href="#formation">Formation</a><a href="about.html">À propos</a><a
+        class="nav-language" href="index-en.html" lang="en" hreflang="en">EN</a><a class="nav-contact"
+        href="#contact">Contact <span>↗</span></a></nav>
+    <div class="top-actions"><a class="header-cv" href="assets/cv/Diego_Torres_CV.pdf" download>Télécharger le CV
+        ↓</a><button class="icon-button" id="themeToggle"
+        aria-label="Changer le thème">◐</button><button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu"
+        aria-expanded="false"><span></span><span></span></button></div>
   </header>
-
   <main>
-    <section class="hero section-shell" id="accueil">
+    <section class="hero section-shell home-hero" id="profil">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> PORTFOLIO 2025 <span class="eyebrow-line"></span> FRANCE</div>
+        <div class="eyebrow"><span class="status-dot"></span> PORTFOLIO PERSONNEL <span class="eyebrow-line"></span>
+          FRANCE</div>
         <h1>La donnée<br>prend <em>forme.</em></h1>
-        <p class="hero-lead">Je construis des solutions Data & IA qui relient les besoins métier aux outils du quotidien.</p>
-        <p class="hero-sub">Data Engineer · Python · Machine Learning · Applications métier<br>Du problème concret au produit exploitable.</p>
-        <div class="hero-actions"><a class="button button-lime" href="#projets">Explorer les projets <span>↓</span></a><a class="text-link" href="mailto:dieg.torres64@gmail.com">Me contacter <span>↗</span></a></div>
-        <div class="hero-meta"><span><i class="meta-icon">⌁</i> Basé en France</span><span><i class="meta-icon">◎</i> Expérience Data & développement</span></div>
+        <p class="hero-lead">Je relie la Data, l’intelligence artificielle et le développement d’outils métier.</p>
+        <p class="hero-sub">Data Engineer · Python · Machine Learning · Applications métier</p>
+        <div class="hero-actions"><a class="button button-lime" href="#parcours">Voir mes expériences
+            <span>↓</span></a><a class="text-link" href="mailto:dieg.torres64@gmail.com">Me contacter
+            <span>↗</span></a><a class="text-link" href="assets/cv/Diego_Torres_CV.pdf" download>CV PDF ↓</a></div>
+        <div class="hero-meta"><span><i class="meta-icon">⌁</i> Master Big Data & IA · ESTIAM</span><span><i
+              class="meta-icon">◎</i> De l’analyse au déploiement</span></div>
       </div>
-      <div class="hero-art reveal" aria-label="Visualisation abstraite de données">
-        <div class="art-top"><span>FIG. 01 / DATA SYSTEM</span><span>DT—25</span></div>
-        <div class="orb-wrap"><div class="orb orb-back"></div><div class="orb orb-main"><div class="orb-core"></div><div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div><div class="orb-ring ring-three"></div><span class="orb-label label-a">SIGNAL</span><span class="orb-label label-b">MODEL</span></div><span class="orb-node node-a"></span><span class="orb-node node-b"></span><span class="orb-node node-c"></span></div>
-        <div class="art-bottom"><span>INPUT → INSIGHT → IMPACT</span><span class="live-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-        <div class="art-stamp">DT<br><span>DATA<br>LAB</span></div>
+      <div class="hero-art hero-portrait reveal"><img class="cv-wave" src="assets/cv/cv-wave.png" alt=""><img
+          class="cv-orbit" src="assets/cv/cv-frame.png" alt="">
+        <div class="portrait-frame"><img src="assets/cv/portrait.jpeg" alt="Portrait de Diego Torres"><span
+            class="portrait-badge">DATA<br>& IA</span></div>
+        <div class="portrait-caption"><span>DIEGO TORRES</span><small>DATA ENGINEER · SOFTWARE · IA</small></div>
+        <div class="portrait-number">01 / PROFILE</div>
+      </div><a class="scroll-cue" href="#parcours"><span></span> DÉFILER POUR EXPLORER</a>
+    </section>
+    <section class="intro-band">
+      <div class="section-shell intro-grid">
+        <div class="section-label reveal"><span>01 — PROFIL</span><span class="label-rule"></span></div>
+        <div class="intro-content reveal">
+          <h2>Une approche qui part<br>du <em>terrain.</em></h2>
+          <div class="intro-columns">
+            <p>Mon parcours va du développement d’ERP et d’applications métier aux projets de Data Science. J’aime
+              comprendre les besoins des équipes avant de choisir la réponse technique.</p>
+            <p>Ces pages présentent séparément mes expériences chez TC Concept, Green Dev / Tilkeo et BAE360. La page
+              Pricing détaille un projet d’analyse prédictive à partir des tableaux de mon rapport.</p>
+          </div>
+          <div class="fact-row">
+            <div><b>3</b><span>expériences professionnelles</span></div>
+            <div><b>2025</b><span>Master Big Data & IA</span></div>
+            <div><b>4</b><span>pages de réalisations</span></div>
+          </div>
+        </div>
       </div>
-      <a class="scroll-cue" href="#profil"><span></span> DÉFILER POUR EXPLORER</a>
-      <div class="hero-index">01 / 06</div>
     </section>
-
-    <section class="intro-band" id="profil"><div class="section-shell intro-grid"><div class="section-label reveal"><span>01 — PROFIL</span><span class="label-rule"></span></div><div class="intro-content reveal"><h2>Une approche qui part<br>du <em>terrain.</em></h2><div class="intro-columns"><p>Mon parcours croise le développement web, la donnée et l’intelligence artificielle. J’aime comprendre comment un métier fonctionne avant de choisir la technologie qui peut l’aider.</p><p>Chez BAE360, Green Dev / Tilkeo et TC Concept, j’ai travaillé sur des outils concrets : ERP, applications métier, modèles prédictifs et tableaux de bord. Mon fil conducteur : rendre la technique utile et compréhensible.</p></div><div class="fact-row"><div><b>3</b><span>expériences professionnelles</span></div><div><b>5 ans</b><span>de formation informatique</span></div><div><b>2025</b><span>Master Big Data & IA</span></div></div></div></div></section>
-
-    <section class="journey section-shell" id="parcours"><div class="section-heading reveal"><div><div class="section-kicker">02 — EXPÉRIENCES & FORMATION</div><h2>Le parcours,<br><em>en mouvement.</em></h2></div><p>Des applications métier aux modèles prédictifs, chaque étape a rapproché développement logiciel et décision par la donnée.</p></div>
-      <div class="journey-layout"><div class="timeline" id="timeline">
-        <article class="timeline-item reveal"><span class="timeline-year">2024 — 2025</span><span class="timeline-pin"></span><div class="timeline-card"><div class="card-topline"><span>EXPÉRIENCE · DATA & IA</span><span class="card-number">01</span></div><h3>Chef de projet IA</h3><div class="company">TC Concept <span>· Lyon</span></div><p>Gestion de projets Data & IA, analyse du besoin métier et préparation des données. Développement de modèles prédictifs avec Python et Scikit-learn, création de reportings Power BI et collaboration avec les équipes métier et techniques.</p><div class="tag-row"><span>Python</span><span>Machine Learning</span><span>Power BI</span><span>SQL</span></div><div class="timeline-outcome"><span class="outcome-dot"></span>Une vision business appliquée à la Data Science</div></div></article>
-        <article class="timeline-item reveal"><span class="timeline-year">2022 — 2023</span><span class="timeline-pin"></span><div class="timeline-card"><div class="card-topline"><span>ALTERNANCE · FULL STACK</span><span class="card-number">02</span></div><h3>Développeur Full Stack</h3><div class="company">Green Dev · Tilkeo <span>· Chalon-sur-Saône</span></div><p>Contribution à Tilkeo, une plateforme CRM / ERP / MRP pour les entreprises du groupe DS Group et des sociétés externes. Développement de fonctionnalités en Django et Vue.js, avec MySQL.</p><div class="tag-row"><span>Django</span><span>Vue.js</span><span>MySQL</span><span>GitHub</span><span>Trello</span></div><div class="timeline-outcome"><span class="outcome-dot"></span>Fonctionnalités métier du back-end à l’interface</div></div></article>
-        <article class="timeline-item reveal"><span class="timeline-year">2021 — 2022</span><span class="timeline-pin"></span><div class="timeline-card"><div class="card-topline"><span>ALTERNANCE · DÉVELOPPEMENT WEB</span><span class="card-number">03</span></div><h3>Développeur Web</h3><div class="company">BAE360 · ERP CRM Experts <span>· Chalon-sur-Saône</span></div><p>Personnalisation d’ERP NetSuite pour de grandes entreprises et gestion d’imports / exports de volumes importants. Travail avec les équipes techniques et fonctionnelles.</p><div class="tag-row"><span>JavaScript</span><span>NetSuite</span><span>Azure DevOps</span><span>ERP</span></div><div class="timeline-outcome"><span class="outcome-dot"></span>Rigueur et industrialisation des outils</div></div></article>
-      </div><aside class="education-panel reveal"><div class="panel-label">FORMATION <span>↘</span></div><div class="education-entry"><span class="edu-date">2023 — 2025</span><h3>Master Big Data &<br>Intelligence Artificielle</h3><p>ESTIAM · Lyon</p><span class="edu-line"></span><small>Data Science · Machine Learning<br>Big Data · Data Engineering · BI</small></div><div class="education-entry"><span class="edu-date">2020 — 2023</span><h3>Licence Informatique<br>Générale</h3><p>CNAM · Chalon-sur-Saône</p><span class="edu-line"></span><small>Programmation · bases de données<br>Web · algorithmique</small></div><div class="education-entry"><span class="edu-date">2020</span><h3>Baccalauréat scientifique</h3><p>Spécialité ISN</p></div><div class="edu-foot">APPRENDRE EN FAISANT <span>✳</span></div></aside></div>
+    <section class="journey section-shell" id="parcours">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">02 — EXPÉRIENCES</div>
+          <h2>Chaque étape,<br><em>une page dédiée.</em></h2>
+        </div>
+        <p>Parcours chronologique. Ouvre une expérience pour découvrir les missions, outils et apprentissages décrits
+          dans mes documents.</p>
+      </div>
+      <div class="experience-filter" role="group" aria-label="Filtrer les expériences par compétence"><span>FILTRER PAR
+          COMPÉTENCE</span><button class="skill-filter is-selected" type="button" data-skill="all"
+          aria-pressed="true">Tout le parcours</button><button class="skill-filter" type="button" data-skill="data"
+          aria-pressed="false">Data & IA</button><button class="skill-filter" type="button" data-skill="fullstack"
+          aria-pressed="false">Full Stack</button><button class="skill-filter" type="button" data-skill="erp"
+          aria-pressed="false">ERP & intégration</button><output id="experienceFilterCount" aria-live="polite">3
+          expériences</output></div>
+      <div class="experience-cards">
+        <a class="experience-card reveal" data-skills="data python reporting project"
+          href="experience-tc-concept.html"><span class="company-mark company-mark--tc"
+            aria-label="Logo TC Concept"><img src="https://www.tcconcept.fr/upload/images/logo_e-tc.png"
+              alt="TC Concept"></span><span class="experience-year">2024 — 2025</span><span
+            class="experience-index">01</span>
+          <h3>Chef de projet IA</h3>
+          <div class="company">TC Concept <span>· Lyon</span></div>
+          <p>Deux volets : refonte des reportings de contrôle de gestion dans Power BI pour les agences, puis analyse Pricing et prédiction de transformation des devis.</p>
+          <div class="tag-row"><span>Data & IA</span><span>Python</span><span>Power BI</span></div>
+          <div class="experience-open">Découvrir l’expérience <b>↗</b></div>
+        </a>
+        <a class="experience-card reveal" data-skills="fullstack python django vue mysql api"
+          href="experience-tilkeo.html"><span class="company-mark company-mark--tilkeo"
+            aria-label="Logo Tilkeo Rénovation"><img src="assets/logos/tilkeo-renovation.png"
+              alt="Logo Tilkeo Rénovation"></span><span class="experience-year">2022 — 2023</span><span
+            class="experience-index">02</span>
+          <h3>Développeur Full Stack</h3>
+          <div class="company">Green Dev · Tilkeo <span>· Alternance</span></div>
+          <p>ERP interne du groupe : informatiser le parcours rénovation énergétique, de la prospection aux travaux et au SAV, avec des modules métier pour les équipes.</p>
+          <div class="tag-row"><span>Django</span><span>Vue.js</span><span>MySQL</span></div>
+          <div class="experience-open">Découvrir l’expérience <b>↗</b></div>
+        </a>
+        <a class="experience-card reveal" data-skills="erp javascript devops data netsuite"
+          href="experience-bae360.html"><span class="company-mark company-mark--bae"
+            aria-label="Logo BAE Before Anything"><img src="assets/logos/bae.png"
+              alt="Logo BAE Before Anything"></span><span class="experience-year">2021 — 2022</span><span
+            class="experience-index">03</span>
+          <h3>Développeur Web</h3>
+          <div class="company">BAE360 · ERP CRM Experts <span>· Alternance</span></div>
+          <p>Personnalisation d’ERP NetSuite et traitement d’imports / exports de données à grande échelle.</p>
+          <div class="tag-row"><span>JavaScript</span><span>NetSuite</span><span>Azure DevOps</span></div>
+          <div class="experience-open">Découvrir l’expérience <b>↗</b></div>
+        </a>
+      </div>
     </section>
-
-    <section class="projects-section" id="projets"><div class="section-shell"><div class="section-heading project-heading reveal"><div><div class="section-kicker">03 — SÉLECTION DE PROJETS</div><h2>Du code au<br><em>cas d’usage.</em></h2></div><p>Quatre angles pour résoudre des problèmes différents. Explore les réalisations et les technologies utilisées.</p></div>
-      <div class="project-toolbar reveal"><div class="filter-list" role="group" aria-label="Filtrer les projets"><button class="filter-chip active" data-filter="all">Tout <span>04</span></button><button class="filter-chip" data-filter="data">Data & IA <span>02</span></button><button class="filter-chip" data-filter="software">Logiciel <span>02</span></button></div><div class="project-count"><span id="projectCount">04</span> PROJETS</div></div>
-      <div class="project-grid" id="projectGrid">
-        <article class="project-card project-featured reveal" data-category="data"><div class="project-visual visual-ml"><div class="visual-header"><span>TC CONCEPT / 2024—25</span><span class="visual-index">P—01</span></div><div class="chart-stage"><div class="chart-axis axis-y"><span>HAUTE</span><span>VALEUR</span><span>BASSE</span></div><div class="scatter-chart" aria-hidden="true"><i style="--x:9%;--y:71%"></i><i style="--x:16%;--y:61%"></i><i style="--x:23%;--y:66%"></i><i style="--x:27%;--y:48%"></i><i style="--x:35%;--y:54%"></i><i style="--x:39%;--y:42%"></i><i style="--x:47%;--y:49%"></i><i style="--x:51%;--y:32%"></i><i style="--x:59%;--y:39%"></i><i style="--x:65%;--y:29%"></i><i style="--x:71%;--y:35%"></i><i style="--x:77%;--y:22%"></i><i style="--x:84%;--y:26%"></i><i style="--x:91%;--y:13%"></i></div><div class="chart-axis axis-x"><span>HISTORIQUE</span><span>DEVIS COMMERCIAL</span><span>PRÉVISION</span></div><div class="chart-trend"></div></div><div class="visual-footer"><span>MODÈLE PRÉDICTIF</span><span>PYTHON / SCIKIT-LEARN</span></div></div><div class="project-info"><div class="project-type">01 / MACHINE LEARNING</div><h3>Prioriser les devis<br>avec la donnée</h3><p>Développement de modèles prédictifs pour estimer la transformation des devis et aider les équipes à mieux prioriser leurs actions commerciales.</p><div class="project-meta"><span>TC Concept</span><span>→</span><span>Python · Pandas · Scikit-learn · SQL</span></div><details class="project-details"><summary>Voir la démarche <span>＋</span></summary><p>Analyse et nettoyage des données, formalisation du besoin métier, entraînement de modèles et suivi des indicateurs. Le CV confirme le développement et le déploiement de modèles prédictifs ; aucune métrique de performance n’a été fournie.</p></details></div></article>
-        <article class="project-card reveal" data-category="software"><div class="project-visual visual-app"><div class="visual-header"><span>TILKEO / MODULES MÉTIER</span><span class="visual-index">P—02</span></div><div class="app-mock"><div class="app-sidebar"><div class="app-logo">tilkeo<span>.</span></div><i></i><i></i><i></i><i></i><div class="app-avatar">DT</div></div><div class="app-main"><div class="app-top"><span>Simulateur d’aides</span><span class="app-user">● Connecté</span></div><div class="app-title">Estimation du dossier <span>↗</span></div><div class="app-subtitle">Rénovation énergétique · 2023</div><div class="app-box"><div class="app-box-title">Montant estimé des aides</div><div class="app-money">MPR <span>+ CEE</span></div><div class="app-progress"><i></i></div><div class="app-caption">Calcul selon les plafonds de ressources</div></div><div class="app-row"><div></div><div></div><div></div></div></div></div><div class="visual-footer"><span>APPLICATION MÉTIER</span><span>DJANGO / VUE.JS</span></div></div><div class="project-info"><div class="project-type">02 / FULL STACK</div><h3>Tik’aide & les modules Tilkeo</h3><p>Un CRM / ERP / MRP enrichi de fonctions métier : estimation des aides MPR / CEE, annuaires et suivi des historiques de prix fournisseurs.</p><div class="project-meta"><span>Green Dev · Tilkeo</span><span>→</span><span>Django · Vue.js · MySQL</span></div><details class="project-details"><summary>Voir la démarche <span>＋</span></summary><p>Compréhension des besoins utilisateurs, développement back-end et front-end, puis suivi des évolutions avec GitHub et Trello au sein d’une équipe en alternance.</p></details></div></article>
-        <article class="project-card reveal" data-category="data"><div class="project-visual visual-bi"><div class="visual-header"><span>DATA VISUALISATION / POWER BI</span><span class="visual-index">P—03</span></div><div class="dashboard-mock"><div class="dash-title">Pilotage des indicateurs <span>TC / DATA</span></div><div class="dash-kpis"><div><small>INDICATEUR</small><b>Suivi</b><i>Vue consolidée</i></div><div><small>ANALYSE</small><b>Clarté</b><i>Lecture métier</i></div><div><small>DÉCISION</small><b>Action</b><i>Reporting partagé</i></div></div><div class="dash-graph"><div class="dash-grid"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 500 130" preserveAspectRatio="none" aria-label="Illustration décorative d'un graphique de tendance"><path d="M0 103 C35 98 38 70 76 79 S112 54 151 71 S184 40 224 52 S264 77 301 49 S341 65 378 33 S424 54 462 20 S483 30 500 9" fill="none" stroke="currentColor" stroke-width="3" vector-effect="non-scaling-stroke"/><path d="M0 103 C35 98 38 70 76 79 S112 54 151 71 S184 40 224 52 S264 77 301 49 S341 65 378 33 S424 54 462 20 S483 30 500 9 L500 130 L0 130Z" fill="currentColor" opacity=".08"/></svg></div><div class="dash-legend"><span>Suivi des indicateurs</span><span>Vue de démonstration</span></div></div><div class="visual-footer"><span>TABLEAU DE BORD</span><span>POWER BI / REPORTING</span></div></div><div class="project-info"><div class="project-type">03 / BUSINESS INTELLIGENCE</div><h3>Des reportings pour décider</h3><p>Création de reportings Power BI pour suivre des indicateurs et soutenir l’aide à la décision, en lien avec les équipes comptabilité et data governance.</p><div class="project-meta"><span>TC Concept</span><span>→</span><span>Power BI · SQL · Analyse métier</span></div><details class="project-details"><summary>Voir la démarche <span>＋</span></summary><p>Le visuel du tableau de bord ci-dessus est une maquette illustrative. Les documents sources ne contiennent ni capture réelle ni chiffres métier publiables.</p></details></div></article>
-        <article class="project-card reveal" data-category="software"><div class="project-visual visual-erp"><div class="visual-header"><span>BAE360 / ERP NETSUITE</span><span class="visual-index">P—04</span></div><div class="erp-visual"><div class="erp-window"><div class="erp-bar"><span></span><span></span><span></span><b>IMPORT / EXPORT DATA</b></div><div class="erp-body"><div class="erp-nav"><i></i><i></i><i></i><i></i><i></i></div><div class="erp-content"><div class="erp-title">Data workflow <small>PROCESSING</small></div><div class="erp-steps"><span class="step-done">SOURCE</span><b>→</b><span class="step-done">VALIDATION</span><b>→</b><span class="step-active">ERP</span></div><div class="erp-table"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="erp-load"><span>Traitement des données</span><b>•••</b></div></div></div></div><span class="data-orbit orbit-one"></span><span class="data-orbit orbit-two"></span></div><div class="visual-footer"><span>PERSONNALISATION ERP</span><span>JAVASCRIPT / NETSUITE</span></div></div><div class="project-info"><div class="project-type">04 / DÉVELOPPEMENT WEB</div><h3>Automatiser les flux ERP</h3><p>Personnalisation de solutions NetSuite et gestion d’imports / exports de grands volumes de données pour des clients entreprise.</p><div class="project-meta"><span>BAE360</span><span>→</span><span>JavaScript · NetSuite · Azure DevOps</span></div><details class="project-details"><summary>Voir la démarche <span>＋</span></summary><p>Intervention en alternance sur les évolutions ERP et les échanges de données, avec les équipes techniques et fonctionnelles.</p></details></div></article>
-      </div><div class="project-note"><span>✳</span> Les visuels des projets sont des illustrations de démonstration. Ils ne reproduisent pas des interfaces internes ni des résultats chiffrés.</div>
-    </div></section>
-
-    <section class="expertise section-shell" id="expertise"><div class="section-heading reveal"><div><div class="section-kicker">04 — COMPÉTENCES</div><h2>Des outils pour<br><em>faire avancer.</em></h2></div><p>Une boîte à outils qui couvre le cycle complet : données, modèles, applications, visualisation et travail en équipe.</p></div><div class="expertise-grid"><div class="skill-map reveal"><div class="skill-map-head"><span>DOMAINES TECHNIQUES</span><span>01—05</span></div><div class="skill-visual"><div class="skill-ring ring-outer"></div><div class="skill-ring ring-mid"></div><div class="skill-ring ring-inner"></div><div class="skill-cross cross-h"></div><div class="skill-cross cross-v"></div><div class="skill-center">DATA<br><span>×</span><br>IMPACT</div><div class="skill-orbit-label orbit-label-1">ANALYSER</div><div class="skill-orbit-label orbit-label-2">CONSTRUIRE</div><div class="skill-orbit-label orbit-label-3">TRANSMETTRE</div><span class="skill-dot sd1"></span><span class="skill-dot sd2"></span><span class="skill-dot sd3"></span><span class="skill-dot sd4"></span></div><div class="skill-caption"><span>PROBLÈME MÉTIER</span><span>→</span><span>SOLUTION DATA</span></div></div><div class="skill-list reveal"><article class="skill-item"><div class="skill-no">01</div><div class="skill-detail"><h3>Data Science & Machine Learning</h3><p>Python · Pandas · NumPy · Scikit-learn · régression · arbres de décision · Random Forest · K-means</p></div><span class="skill-arrow">↗</span></article><article class="skill-item"><div class="skill-no">02</div><div class="skill-detail"><h3>Data Engineering & bases de données</h3><p>SQL · MySQL · MongoDB · Hadoop · Spark · Scala · Kafka · ETL · Databricks · MongoDB · NoSQL</p></div><span class="skill-arrow">↗</span></article><article class="skill-item"><div class="skill-no">03</div><div class="skill-detail"><h3>Développement d’applications</h3><p>Python · Django · FastAPI · Vue.js · JavaScript · HTML · CSS · Java</p></div><span class="skill-arrow">↗</span></article><article class="skill-item"><div class="skill-no">04</div><div class="skill-detail"><h3>Visualisation & BI</h3><p>Power BI · Matplotlib · Seaborn · R · reporting · tableaux de bord décisionnels</p></div><span class="skill-arrow">↗</span></article><article class="skill-item"><div class="skill-no">05</div><div class="skill-detail"><h3>Outils & travail en équipe</h3><p>GitHub · Trello · Azure DevOps · NetSuite · Scrum · gestion de projet · hackathons</p></div><span class="skill-arrow">↗</span></article></div></div></section>
-
-    <section class="approach-section"><div class="section-shell approach-grid"><div class="section-label reveal"><span>05 — MA MÉTHODE</span><span class="label-rule"></span></div><div class="approach-content reveal"><h2>La bonne solution<br>commence par <em>la bonne question.</em></h2><div class="approach-steps"><article><span>01 / COMPRENDRE</span><h3>Écouter le besoin</h3><p>Clarifier le problème métier, les utilisateurs et les contraintes.</p></article><article><span>02 / CONSTRUIRE</span><h3>Choisir l’approche</h3><p>Préparer les données ou concevoir l’application adaptée au cas.</p></article><article><span>03 / TRANSMETTRE</span><h3>Rendre exploitable</h3><p>Présenter les résultats et faciliter leur usage par les équipes.</p></article></div></div></div></section>
-
-    <section class="contact-section section-shell" id="contact"><div class="contact-card reveal"><div class="contact-orbit orbit-contact-a"></div><div class="contact-orbit orbit-contact-b"></div><div class="contact-content"><div class="section-kicker">06 — CONTACT</div><h2>Un problème intéressant<br>à <em>résoudre ?</em></h2><p>Data Engineering, Machine Learning ou application métier : parlons de votre besoin. Je souhaite contribuer à des projets Data dans l’aéronautique et le spatial.</p><a class="button button-lime" href="mailto:dieg.torres64@gmail.com">dieg.torres64@gmail.com <span>↗</span></a><div class="contact-phone">07 71 71 87 51</div></div><div class="contact-signature">DT<span>.</span><small>DATA<br>ENGINEER</small></div><div class="contact-foot"><span>OUVERT AUX ÉCHANGES PROFESSIONNELS</span><span>FRANCE · 2025</span></div></div></section>
+    <section class="portfolio-dashboard section-shell" id="tableau-de-bord">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">03 — VUE D’ENSEMBLE</div>
+          <h2>Le parcours<br><em>en quelques repères.</em></h2>
+        </div>
+        <p>Indicateurs calculés à partir des expériences du CV et du tableau de catégories du rapport Pricing.</p>
+      </div>
+      <div class="dashboard-grid"><a class="dashboard-metric"
+          href="#parcours"><span>EXPÉRIENCES</span><b>03</b><small>TC Concept · Green Dev · BAE360</small><i>Source : CV
+            · 2021–2025</i></a><a class="dashboard-metric" href="pricing.html"><span>CATÉGORIES
+            PRICING</span><b>38</b><small>Lignes de catégorie dans le tableau source</small><i>Source : Rapport Pricing
+            · table F1/AUC</i></a><a class="dashboard-metric" href="#competences"><span>DOMAINES DE
+            PROJET</span><b>03</b><small>Data & IA · développement métier · ERP</small><i>Source : CV et rapports
+            d’expérience</i></a></div>
+      <div class="dashboard-foot"><span class="status-dot"></span> Les indicateurs renvoient vers les pages qui
+        détaillent leur source et leur contexte.</div>
+    </section>
+    <section class="journey section-shell" id="chronologie">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">04 — CHRONOLOGIE</div>
+          <h2>Un parcours<br><em>qui se construit.</em></h2>
+        </div>
+        <p>Des premières expériences en ERP aux projets Data & IA, un parcours qui relie développement, pilotage et formation.</p>
+      </div>
+      <div class="journey-layout">
+        <div class="timeline" id="careerTimeline">
+          <article class="timeline-item reveal"><span class="timeline-year">2024 — 2025</span><span class="timeline-pin"></span><a class="timeline-card" href="experience-tc-concept.html"><div class="card-topline"><span>EXPÉRIENCE · DATA & IA</span><span class="card-number">01</span></div><h3>Chef de projet IA</h3><div class="company">TC Concept <span>· Lyon</span></div><p>Deux activités complémentaires : refonte du contrôle de gestion dans Power BI à partir d’un cube de données partagé par les agences, et analyse Pricing de la transformation des devis.</p><div class="tag-row"><span>Power BI</span><span>Cube de données</span><span>Python</span><span>Machine Learning</span></div><div class="timeline-outcome"><span class="outcome-dot"></span>Structurer la donnée pour éclairer les décisions métier</div></a></article>
+          <article class="timeline-item reveal"><span class="timeline-year">2022 — 2023</span><span class="timeline-pin"></span><a class="timeline-card" href="experience-tilkeo.html"><div class="card-topline"><span>ALTERNANCE · FULL STACK</span><span class="card-number">02</span></div><h3>Développeur Full Stack</h3><div class="company">Green Dev · Tilkeo <span>· Chalon-sur-Saône</span></div><p>Développement de l’ERP interne du groupe Tilkeo pour informatiser le parcours de rénovation énergétique, de la prospection aux travaux et au SAV. Tik’aide est l’un des modules métier développés.</p><div class="tag-row"><span>Django</span><span>Vue.js</span><span>MySQL</span><span>CRM / ERP / MRP</span></div><div class="timeline-outcome"><span class="outcome-dot"></span>Relier les processus du groupe dans une application métier</div></a></article>
+          <article class="timeline-item reveal"><span class="timeline-year">2021 — 2022</span><span class="timeline-pin"></span><a class="timeline-card" href="experience-bae360.html"><div class="card-topline"><span>ALTERNANCE · DÉVELOPPEMENT WEB</span><span class="card-number">03</span></div><h3>Développeur Web</h3><div class="company">BAE360 · ERP CRM Experts <span>· Chalon-sur-Saône</span></div><p>Personnalisation d’ERP NetSuite en JavaScript et participation aux imports / exports de volumes importants, avec les équipes techniques et fonctionnelles.</p><div class="tag-row"><span>JavaScript</span><span>NetSuite</span><span>Azure DevOps</span><span>ERP</span></div><div class="timeline-outcome"><span class="outcome-dot"></span>Découvrir les flux de données d’un ERP en production</div></a></article>
+        </div>
+        <aside class="education-panel reveal"><div class="panel-label">FORMATION <span>↘</span></div><div class="education-entry"><span class="edu-date">2023 — 2025</span><h3>Master Big Data &<br>Intelligence Artificielle</h3><p>ESTIAM · Lyon</p><span class="edu-line"></span><small>Data Science · Machine Learning<br>Deep Learning · Big Data · Power BI</small></div><div class="education-entry"><span class="edu-date">2020 — 2023</span><h3>Licence Informatique<br>Générale</h3><p>CNAM · Chalon-sur-Saône</p><span class="edu-line"></span><small>Programmation · algorithmique<br>Bases de données · développement web</small></div><div class="education-entry"><span class="edu-date">2020</span><h3>Baccalauréat scientifique</h3><p>Spécialité ISN</p><span class="edu-line"></span><small>Algorithmique · programmation</small></div><div class="edu-foot">APPRENDRE EN FAISANT <span>✳</span></div></aside>
+      </div>
+    </section>
+    <section class="project-showcase section-shell" id="projets">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">05 — PROJETS À LA UNE</div>
+          <h2>Des réalisations<br><em>en détail.</em></h2>
+        </div>
+        <p>Quatre réalisations détaillées : refonte de reporting, analyse Pricing, outil métier et projet ERP.</p>
+      </div>
+      <div class="project-tiles"><a class="project-tile project-tile--pricing" href="pricing.html"><img
+            src="assets/captures-pricing/capture-02.png" alt="Tableau de bord Pricing par famille de produits"
+            loading="lazy"><span>DATA SCIENCE · 2025</span><b>Pricing & transformation des devis</b><small>Analyse des
+            segments, marges et indicateurs du rapport.</small><i>Voir l’étude ↗</i></a><a
+          class="project-tile project-tile--help" href="project-tikaide.html"><img
+            src="assets/captures-tilkeo/aide-popup.png" alt="Aide contextuelle dans Tilkeo"
+            loading="lazy"><span>APPLICATION MÉTIER · TILKEO</span><b>Tik’aide</b><small>Contenu d’aide intégré et
+            génération de PDF pour les aides.</small><i>Voir le projet ↗</i></a><a
+            class="project-tile project-tile--erp" href="project-netsuite.html"><img src="assets/logos/bae.png"
+            alt="Logo BAE" loading="lazy"><span>ERP · BAE360</span><b>Personnalisation NetSuite</b><small>Fonctions
+            JavaScript et flux d’import / export.</small><i>Voir le projet ↗</i></a><a class="project-tile project-tile--powerbi" href="project-powerbi-controle-gestion.html"><div class="powerbi-tile-visual" aria-hidden="true"><span>DATA CUBE</span><i>↗</i><i>↗</i><i>↗</i><b>POWER BI</b></div><span>DATA · CONTRÔLE DE GESTION</span><b>Reporting Power BI multi-agences</b><small>Graphiques de performance, gouvernance des données et reprise approfondie du reporting budgétaire.</small><i>Voir le projet ↗</i></a></div>
+    </section>
+    <section class="skill-map-section section-shell" id="skill-map">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">06 — CARTE DE COMPÉTENCES</div>
+          <h2>Les compétences<br><em>en contexte.</em></h2>
+        </div>
+        <p>Chaque famille de compétences renvoie aux expériences où elle a été mobilisée.</p>
+      </div>
+      <div class="skill-map-grid"><button type="button" class="skill-map-card"
+          data-skill-map="data"><span>01</span><b>Data & IA</b><small>Python · Pandas · scikit-learn · Power
+            BI</small><i>TC Concept ↗</i></button><button type="button" class="skill-map-card"
+          data-skill-map="fullstack"><span>02</span><b>Développement Full Stack</b><small>Django · API REST · Vue.js ·
+            MySQL</small><i>Green Dev · Tilkeo ↗</i></button><button type="button" class="skill-map-card"
+          data-skill-map="erp"><span>03</span><b>ERP & intégration</b><small>JavaScript · NetSuite · Azure DevOps · flux
+            de données</small><i>BAE360 ↗</i></button></div>
+      <p class="skill-map-result" id="skillMapResult" aria-live="polite">Choisis un domaine pour filtrer les expériences
+        correspondantes.</p>
+    </section>
+    <section class="intro-band" id="formation">
+      <div class="section-shell intro-grid">
+        <div class="section-label reveal"><span>07 — FORMATION</span><span class="label-rule"></span></div>
+        <div class="intro-content reveal">
+          <h2>Apprendre,<br><em>puis appliquer.</em></h2>
+          <div class="education-summary">
+            <article><span>2023 — 2025</span>
+              <h3>Master Big Data & Intelligence Artificielle</h3>
+              <p>ESTIAM · Lyon</p><small>Machine Learning · Deep Learning · Big Data Analytics · Python avancé · Pandas · scikit-learn · analyse prédictive · visualisation</small><div class="education-program"><b>Compétences / programmes</b><ul><li>Programmation Python et manipulation de données avec Pandas</li><li>Machine Learning, apprentissage supervisé et modèles prédictifs</li><li>Deep Learning et principes de l’intelligence artificielle</li><li>Analyse Big Data, préparation et visualisation de données</li><li>Évaluation de modèles et interprétation d’indicateurs</li></ul></div>
+            </article>
+            <article><span>2020 — 2023</span>
+              <h3>Licence Informatique Générale</h3>
+              <p>CNAM · Chalon-sur-Saône</p><small>Programmation · bases de données · développement web · algorithmique</small><div class="education-program"><b>Compétences / programmes</b><ul><li>Algorithmique et programmation</li><li>Conception de bases de données et requêtes SQL</li><li>Développement web et principes Full Stack</li><li>Logique, structures de données et résolution de problèmes</li><li>Fondamentaux des systèmes et du génie logiciel</li></ul></div>
+            </article>
+            <article><span>2020</span>
+              <h3>Baccalauréat scientifique, spécialité ISN</h3>
+              <p>Lycée René Cassin</p><small>Spécialité Informatique et Sciences du Numérique (ISN)</small><div class="education-program"><b>Compétences / programmes</b><ul><li>Algorithmique et raisonnement logique</li><li>Premiers projets de programmation</li><li>Initiation aux systèmes numériques</li></ul></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills-section section-shell" id="competences">
+      <div class="skills-heading"><div><div class="section-kicker">OUTILS & COMPÉTENCES</div><h2>Une boîte à outils<br><em>transversale.</em></h2></div><p>Technologies et méthodes recensées dans le CV et les expériences, regroupées par domaine.</p></div>
+      <div class="skills-grid">
+        <article class="skills-group"><span class="skills-index">01 · DATA & IA</span><h3>Analyser et modéliser</h3><ul><li>Python · Pandas · scikit-learn</li><li>Machine Learning · Deep Learning</li><li>Modèles prédictifs et classification</li><li>Power BI · SQL</li><li>Analyse des données et visualisation</li></ul></article>
+        <article class="skills-group"><span class="skills-index">02 · DÉVELOPPEMENT</span><h3>Créer des applications</h3><ul><li>Python · Django</li><li>JavaScript · Vue.js · React.js · Node.js</li><li>HTML et développement Full Stack</li><li>C++ · C#</li><li>API REST et personnalisation ERP</li></ul></article>
+        <article class="skills-group"><span class="skills-index">03 · DONNÉES & OUTILS</span><h3>Structurer et collaborer</h3><ul><li>MySQL · MongoDB · NoSQL</li><li>Azure DevOps · GitHub · Trello</li><li>NetSuite · Power BI</li><li>Agile · Scrum · Kanban</li><li>ReportLab · génération de PDF</li></ul></article>
+        <article class="skills-group"><span class="skills-index">04 · LANGUES & SAVOIR-ÊTRE</span><h3>Travailler en équipe</h3><ul><li>Français : langue maternelle</li><li>Espagnol : avancé</li><li>Anglais : professionnel</li><li>Esprit analytique · autonomie · rigueur</li><li>Travail d’équipe · curiosité</li></ul></article>
+      </div>
+    </section>    <section class="approach-section">
+      <div class="section-shell approach-grid">
+        <div class="section-label reveal"><span>08 — CAP</span><span class="label-rule"></span></div>
+        <div class="approach-content reveal">
+          <h2>Construire une expertise<br>Data <em>responsable.</em></h2>
+          <p class="future-copy">Mon projet professionnel s’oriente vers la Data Science et le Data Engineering. Je
+            souhaite approfondir le cloud, le MLOps, la gouvernance des données et l’explicabilité des modèles, avec à
+            terme davantage de responsabilités techniques.</p>
+          <div class="approach-steps">
+            <article><span>TECHNIQUE</span>
+              <h3>Industrialiser</h3>
+              <p>Cloud et MLOps, axes de progression identifiés dans mon projet professionnel.</p>
+            </article>
+            <article><span>RESPONSABILITÉ</span>
+              <h3>Expliquer</h3>
+              <p>Approfondir l’IA explicable, l’éthique et les biais des modèles.</p>
+            </article>
+            <article><span>TRANSMISSION</span>
+              <h3>Faire comprendre</h3>
+              <p>Relier résultats techniques, besoins métier et décisions utiles.</p>
+            </article>
+          </div>
+          <p class="interest-line">Domaines d’intérêt mentionnés dans mon CV : aéronautique et spatial.</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section section-shell" id="contact">
+      <div class="contact-card reveal">
+        <div class="contact-orbit orbit-contact-a"></div>
+        <div class="contact-orbit orbit-contact-b"></div>
+        <div class="contact-content">
+          <div class="section-kicker">09 — CONTACT</div>
+          <h2>Un sujet Data<br>à <em>explorer ?</em></h2>
+          <p>Data Engineering, Machine Learning ou développement d’outils métier : échangeons.</p><a
+            class="button button-lime" href="mailto:dieg.torres64@gmail.com">dieg.torres64@gmail.com <span>↗</span></a>
+          <form class="contact-form" data-contact-form data-mailto="dieg.torres64@gmail.com">
+            <div class="contact-form-row"><label>Votre nom<input name="name" autocomplete="name"
+                  required></label><label>Votre e-mail<input name="email" type="email" autocomplete="email"
+                  required></label></div><label>Sujet<select name="subject" required>
+                <option value="">Choisir un sujet</option>
+                <option>Projet Data / IA</option>
+                <option>Développement logiciel</option>
+                <option>Recrutement</option>
+                <option>Autre échange</option>
+              </select></label><label>Message<textarea name="message" rows="4" required></textarea></label><button
+              class="contact-submit" type="submit">Préparer le message ↗</button><small>Le formulaire ouvre votre
+              application e-mail avec le message prérempli.</small>
+          </form>
+          <div class="contact-phone">07 71 71 87 51</div>
+        </div>
+        <div class="contact-signature">DT<span>.</span><small>DATA<br>ENGINEER</small></div>
+        <div class="contact-foot"><span>ÉCHANGES PROFESSIONNELS</span><span>FRANCE</span></div>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><a class="brand" href="#accueil"><span class="brand-mark">DT<span>.</span></span><span class="brand-name">DIEGO TORRES<small>DATA · SOFTWARE · IA</small></span></a><span>Portfolio personnel · Informations issues de mon CV et de mes présentations.</span><a href="#accueil">Retour en haut ↑</a></footer>
+  <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">DT<span>.</span></span><span
+        class="brand-name">DIEGO TORRES<small>DATA · SOFTWARE · IA</small></span></a><a href="#profil">Retour en haut ↑</a></footer>
 </body>
+
 </html>
+
+
